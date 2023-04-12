@@ -16,6 +16,10 @@ const navItems = [
     href: '/random',
     prefetch: false,
   },
+  {
+    title: 'Dog Photos',
+    href: '/dogs',
+  },
 ]
 
 export interface NavBarProps {}
