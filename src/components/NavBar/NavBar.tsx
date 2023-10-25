@@ -28,7 +28,7 @@ const NavBar: React.FC<NavBarProps> = () => {
   return (
     <div
       className={clsx(
-        'fixed bottom-0 top-0 z-auto flex h-auto w-72 flex-col justify-center border-r border-gray-800 bg-gray-900',
+        'fixed bottom-0 top-0 z-auto flex h-auto w-32 flex-col justify-center border-r border-gray-800 bg-gray-900 md:w-72',
       )}
     >
       <div className="h-auto overflow-y-auto px-3 py-4">

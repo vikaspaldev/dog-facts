@@ -13,7 +13,12 @@ export interface HomePageProps {}
 const HomePage: React.FC<HomePageProps> = () => {
   return (
     <main className="flex min-h-screen items-center justify-center">
-      <h1 className={clsx(satisfyFont.className, 'my-2 text-8xl font-bold')}>
+      <h1
+        className={clsx(
+          satisfyFont.className,
+          'my-2 text-center text-8xl font-bold',
+        )}
+      >
         Dog Facts 🐕
       </h1>
     </main>

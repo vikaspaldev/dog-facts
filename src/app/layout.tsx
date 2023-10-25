@@ -21,10 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={clsx(robotoFont.className, `bg-gray-900 text-white`)}>
+      <body
+        className={clsx(robotoFont.className, `flex bg-gray-900 text-white`)}
+      >
         <NavBar />
 
-        <div className="h-auto pl-72">{children}</div>
+        <div className="ml-32 w-full md:ml-72">{children}</div>
       </body>
     </html>
   )

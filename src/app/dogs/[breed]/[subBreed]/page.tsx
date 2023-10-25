@@ -2,6 +2,7 @@
 import { fetchSubBreedImages } from '@/services/dog.service'
 import { Suspense } from 'react'
 import Link from 'next/link'
+import { generateUniqueString } from '@/services/generateUniqueString'
 import DogImage from '../../DogImage'
 
 interface DogSubBreedDetailsPageProps {
@@ -29,7 +30,7 @@ export default async function DogSubBreedDetailsPage({
       <ul className="flex flex-wrap gap-x-3 gap-y-4">
         {subBreedImages.length > 0 &&
           subBreedImages.map(subBreedImage => (
-            <li key={subBreed} className="mb-2 rounded-lg">
+            <li key={generateUniqueString()} className="mb-2 rounded-lg">
               <Suspense fallback={<div>Loading...</div>}>
                 {/* @ts-ignore */}
                 <DogImage

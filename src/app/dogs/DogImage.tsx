@@ -1,6 +1,5 @@
-import clsx from 'clsx'
-import Image from 'next/image'
 import { getPlaiceholder } from 'plaiceholder'
+import RenderImage from './RenderImage'
 
 export interface DogImageProps {
   breed: string
@@ -18,18 +17,11 @@ export default async function DogImage({
 
   return (
     <div style={{ width: 200, height: 200 }} className="relative">
-      <Image
+      <RenderImage
         src={dogImage}
-        alt={breed}
-        fill
-        sizes="10vw"
-        className={clsx(
-          'h-auto w-auto rounded-lg object-cover',
-          !nonClickable &&
-            'cursor-pointer transition-opacity duration-300 hover:scale-105 hover:opacity-75',
-        )}
-        placeholder="blur"
+        breed={breed}
         blurDataURL={base64}
+        nonClickable={nonClickable}
       />
     </div>
   )
